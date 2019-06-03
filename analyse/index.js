@@ -63,6 +63,6 @@
         console.log('--->'+maxFreq);
       }
       ctx.fill();
-    }, 500);
+    }, 50);
   }
 })();
