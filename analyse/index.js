@@ -39,6 +39,7 @@
     src.connect(analyser);
 
     LENGTH = analyser.frequencyBinCount;
+    console.log('--->'+LENGTH);
 
     setInterval(() => {
       canvas.width  = window.innerWidth;
