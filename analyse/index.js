@@ -30,8 +30,6 @@
     };
     const src = audioCtx.createMediaStreamSource(stream);
     const analyser = audioCtx.createAnalyser(stream);
-    const data = new Uint8Array(LENGTH);
-    const floatData = new Float32Array(22050);
     let w = 0;
 
     btn.classList.add("off");
@@ -39,6 +37,7 @@
     src.connect(analyser);
 
     LENGTH = analyser.frequencyBinCount;
+    const data = new Uint8Array(LENGTH);
     console.log('--->'+LENGTH);
 
     setInterval(() => {
