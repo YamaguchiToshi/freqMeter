@@ -22,7 +22,8 @@
   }
 
   function _handleClick(stream) {
-    const LENGTH = 16;
+    //const LENGTH = 16;
+    var LENGTH;
     const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
     const options  = {
       mediaStream : stream
@@ -30,11 +31,14 @@
     const src = audioCtx.createMediaStreamSource(stream);
     const analyser = audioCtx.createAnalyser(stream);
     const data = new Uint8Array(LENGTH);
+    const floatData = new Float32Array(22050);
     let w = 0;
 
     btn.classList.add("off");
-    analyser.fftSize = 1024;
+    analyser.fftSize = 2048;
     src.connect(analyser);
+
+    LENGTH = analyser.frequencyBinCount;
 
     setInterval(() => {
       canvas.width  = window.innerWidth;
