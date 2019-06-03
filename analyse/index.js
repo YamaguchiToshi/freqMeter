@@ -58,8 +58,10 @@
         }
         ctx.rect(i * w, canvas.height - data[i] * 2, w, data[i] * 2);        
       }
-      var maxFreq = maxIndex * 44100 / 2048;
-      console.log('--->'+maxFreq);
+      if( maxVal > 250 ){
+        var maxFreq = maxIndex * 44100 / 2048;
+        console.log('--->'+maxFreq);
+      }
       ctx.fill();
     }, 100);
   }
