@@ -53,6 +53,7 @@
 
       for (let i = 0; i < LENGTH; ++i) {
         ctx.rect(i * w, canvas.height - data[i] * 2, w, data[i] * 2);
+        console.log('---['+i+']>'+data[i]);
       }
 
       ctx.fill();
