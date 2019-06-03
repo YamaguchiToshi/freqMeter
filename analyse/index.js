@@ -38,7 +38,6 @@
 
     LENGTH = analyser.frequencyBinCount;
     const data = new Uint8Array(LENGTH);
-    console.log('--->'+LENGTH);
 
     setInterval(() => {
       canvas.width  = window.innerWidth;
@@ -50,12 +49,18 @@
 
       analyser.getByteFrequencyData(data);
 
+      var maxIndex = 0;
+      var maxVal = 0;
       for (let i = 0; i < LENGTH; ++i) {
-        ctx.rect(i * w, canvas.height - data[i] * 2, w, data[i] * 2);
-        console.log('---['+i+']>'+data[i]);
+        if( data[i] > maxVal ){
+          maxVal = data[i];
+          maxIndex = i;
+        }
+        ctx.rect(i * w, canvas.height - data[i] * 2, w, data[i] * 2);        
       }
-
+      var maxFreq = maxIndex * 44100 / 2048;
+      console.log('--->'+maxFreq);
       ctx.fill();
-    }, 20);
+    }, 50);
   }
 })();
