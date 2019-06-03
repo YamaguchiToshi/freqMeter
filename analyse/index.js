@@ -58,7 +58,7 @@
         }
         ctx.rect(i * w, canvas.height - data[i] * 2, w, data[i] * 2);        
       }
-      if( maxVal > 250 ){
+      if( maxVal > 150 ){
         var maxFreq = maxIndex * 44100 / 2048;
         console.log('--->'+maxFreq);
       }
