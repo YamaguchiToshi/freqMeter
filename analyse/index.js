@@ -61,6 +61,6 @@
       var maxFreq = maxIndex * 44100 / 2048;
       console.log('--->'+maxFreq);
       ctx.fill();
-    }, 50);
+    }, 100);
   }
 })();
