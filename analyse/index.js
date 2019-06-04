@@ -60,7 +60,7 @@
         }
         ctx.rect(i * w, canvas.height - data[i] * 2, w, data[i] * 2);        
       }
-      if( maxVal > 50 ){
+      if( maxVal > 50 && maxIndex < 196 ){
         var maxFreq = maxIndex * 44100 / 2048;
         console.log('--->'+maxFreq);
       }
