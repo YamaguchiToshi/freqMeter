@@ -31,6 +31,8 @@
     const src = audioCtx.createMediaStreamSource(stream);
     const analyser = audioCtx.createAnalyser(stream);
     let w = 0;
+    
+    freqOut = document.getElementById('freq');
 
     btn.classList.add("off");
     analyser.fftSize = 2048;
@@ -60,7 +62,6 @@
       }
       if( maxVal > 30 ){
         var maxFreq = maxIndex * 44100 / 2048;
-        maxFreq = Math.round( maxFreq * 100 ) / 100;
         console.log('--->'+maxFreq);
       }
       ctx.fill();
