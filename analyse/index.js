@@ -4,7 +4,9 @@
 
   const btn = document.getElementById("btn");
   const canvas = document.getElementById("canvas");
+  const freqOut = document.getElementById("freq");
   const ctx = canvas.getContext("2d");
+
 
   navigator.mediaDevices.getUserMedia({
     audio: true,
@@ -32,8 +34,6 @@
     const analyser = audioCtx.createAnalyser(stream);
     let w = 0;
     
-    freqOut = document.getElementById('freq');
-
     btn.classList.add("off");
     analyser.fftSize = 2048;
     src.connect(analyser);
