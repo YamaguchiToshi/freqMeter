@@ -62,8 +62,8 @@
       }
       if( maxVal > 100 && maxIndex < 196 ){
         var maxFreq = maxIndex * 44100 / 2048;
-        freqOut.innerHTML = maxFreq;
-        console.log('--->'+maxFreq);
+        maxFreq = Math.round(maxFreq * 10) / 10;
+        freqOut.innerHTML = maxFreq + "ヘルツ";
       }
       ctx.fill();
     }, 50);
