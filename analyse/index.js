@@ -60,7 +60,7 @@
       }
       if( maxVal > 30 ){
         var maxFreq = maxIndex * 44100 / 2048;
-        maxFreq = Math.round( maxFreq * 100 ) / 100;
+        maxFreq = Math.round( maxFreq * 0.01 ) / 0.01;
         console.log('--->'+maxFreq);
       }
       ctx.fill();
