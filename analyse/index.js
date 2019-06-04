@@ -32,7 +32,7 @@
     const analyser = audioCtx.createAnalyser(stream);
     let w = 0;
     
-    //freqOut = document.getElementById('freq');
+    freqOut = document.getElementById('freq');
 
     btn.classList.add("off");
     analyser.fftSize = 2048;
