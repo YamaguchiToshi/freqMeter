@@ -61,7 +61,7 @@
         ctx.rect(i * w, canvas.height - data[i] * 2, w, data[i] * 2);        
       }
       if( maxVal > 100 && maxIndex < 196 ){
-        var maxFreq = maxIndex * 44100 / 2048;
+        var maxFreq = maxIndex * 48000 / 2048;
         maxFreq = Math.round(maxFreq * 10) / 10;
         freqOut.innerHTML = maxFreq + "ヘルツ";
       }
