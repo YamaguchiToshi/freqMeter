@@ -35,7 +35,7 @@
     let w = 0;
     
     btn.classList.add("off");
-    analyser.fftSize = 2048;
+    analyser.fftSize = 8192;
     src.connect(analyser);
 
     LENGTH = analyser.frequencyBinCount;
@@ -61,7 +61,7 @@
         ctx.rect(i * w, canvas.height - data[i] * 2, w, data[i] * 2);        
       }
       if( maxVal > 100 && maxIndex < 196 ){
-        var maxFreq = maxIndex * 48000 / 2048;
+        var maxFreq = maxIndex * 48000 / 8192;
         maxFreq = Math.round(maxFreq * 10) / 10;
         freqOut.innerHTML = maxFreq + "ヘルツ";
       }
