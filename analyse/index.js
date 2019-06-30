@@ -66,6 +66,6 @@
         freqOut.innerHTML = maxFreq + "ヘルツ";
       }
       ctx.fill();
-    }, 50);
+    }, 300);
   }
 })();
